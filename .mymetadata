@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="deploy"
+  id="myeclipse.1468232123601"
+  context-root="/deploy"
+  j2ee-spec="1.7"
+  archive="deploy.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+
