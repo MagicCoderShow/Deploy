@@ -60,6 +60,9 @@
 									<div class="input-field col s6">
 										<p style="display: inline-block;">WAR</p>
 									 	<input type="file" id="input-war" name="file">
+									 	<input type="hidden"  name="war" value="${project.war }">
+									 	<input type="hidden"  name="filename" value="${project.filename }">
+									 	<input type="hidden"  name="suffix" value="${project.suffix }">
 									</div>
 								</div>
 

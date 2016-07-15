@@ -122,9 +122,9 @@
 									<a href="${pageContext.request.contextPath}/detail/linux/${item.id}" class="btn waves-effect waves-light red lighten-2">详情</a>
 									<a href="${pageContext.request.contextPath}/new/linux?id=${item.id}" class="btn waves-effect waves-light red lighten-2">编辑</a>
 									<a href="${pageContext.request.contextPath}/delete/linux?id=${item.id}&projectid=${item.projectid}" class="btn waves-effect waves-light red lighten-2">删除</a>
-									<a class="btn waves-light waves-effect white-text" id="btn-deploy-linux" data-linuxid="${item.id }">部署</a>
-									<a class="btn waves-light waves-effect white-text" id="btn-restart-linux" data-linuxid="${item.id }">重启</a>
-									<a class="btn waves-light waves-effect white-text" id="btn-stop-linux" data-linuxid="${item.id }">停止</a>
+									<a class="btn waves-light waves-effect white-text" tar="btn-deploy-linux" data-linuxid="${item.id }">部署</a>
+									<a class="btn waves-light waves-effect white-text" tar="btn-restart-linux" data-linuxid="${item.id }">重启</a>
+									<a class="btn waves-light waves-effect white-text" tar="btn-stop-linux" data-linuxid="${item.id }">停止</a>
 								</td>
 							</tr>
 						</c:forEach>

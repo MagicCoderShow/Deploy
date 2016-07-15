@@ -42,7 +42,7 @@
 										<label for="input-loginname">loginname</label>
 									</div>
 									<div class="input-field col s6">
-										<input type="password" id="input-password" name="password" oncopy="return false" onpaste="return false" value="">
+										<input type="password" id="input-password" name="password" value="${linux.password}">
 										<label for="input-password">password</label>
 									</div>
 									<div class="input-field col s6">

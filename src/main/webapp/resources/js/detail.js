@@ -27,21 +27,21 @@ $(document).ready(function() {
 	});
 	
 	// 部署按钮
-	$("#btn-deploy-linux").click(function () {
+	$("[tar='btn-deploy-linux']").click(function () {
 		ajaxShell(DEPLOY_PATH+"/todeploy/linux", {id: $(this).data('linuxid')}, function() {
 //			refreshStatus();
 		});
 	});
 
 	// 重启按钮
-	$("#btn-restart-linux").click(function () {
+	$("[tar='btn-restart-linux']").click(function () {
 		ajaxShell(DEPLOY_PATH+"/restart/linux", {id:  $(this).data('linuxid')}, function() {
 //			refreshStatus();
 		});
 	});
 
 	// 停止按钮
-	$("#btn-stop-linux").click(function () {
+	$("[tar='btn-stop-linux']").click(function () {
 		ajaxShell(DEPLOY_PATH+"/stop/linux", {id:  $(this).data('linuxid')}, function() {
 //			refreshStatus();
 		});

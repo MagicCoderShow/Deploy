@@ -98,15 +98,17 @@ public class JavaWebController {
 	@RequestMapping("/edit/project")
 	public String insertProject(@RequestBody@ModelAttribute JavaWebProject project,@RequestParam(value = "file", required = false)MultipartFile file,HttpServletRequest request) throws IOException{
 		//后缀
-		project.setSuffix(file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf(".")));
-		project.setFilename(file.getOriginalFilename());
-		//保存文件
-		File war = new File("/home/file/war/"+System.currentTimeMillis(),file.getOriginalFilename());
-		if(!war.exists()){
-			war.mkdirs();
+		if(!file.isEmpty()){
+			project.setSuffix(file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf(".")));
+			project.setFilename(file.getOriginalFilename());
+			//保存文件
+			File war = new File("/home/file/war/"+System.currentTimeMillis(),file.getOriginalFilename());
+			if(!war.exists()){
+				war.mkdirs();
+			}
+			file.transferTo(war);
+			project.setWar(war.getAbsolutePath());
 		}
-		file.transferTo(war);
-		project.setWar(war.getAbsolutePath());
 		if(project.getId()==null){
 			projectService.insert(project);
 		}else{
